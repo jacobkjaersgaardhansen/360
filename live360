@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <style>
+    </style>
+  </head>
+  
+  <body>
+  
+    <div id="yes">
+      <div class="box" id="videobox" style="overflow: hidden">
+        <img src="http://orig06.deviantart.net/35cc/f/2010/287/9/c/360_panorama_by_bidifoto-d30r1yy.jpg" id="video"/>
+      </div>
+    </div>
+    
+    <div id="no">
+      <p>The device or browser doesn't seem to support Device Orientation or Motion API.</p>
+    </div>
+    
+    <script>
+      var delay = 50;
+      
+      var alpha = 0;
+      var beta = 0;
+      var gamma = 0;
+      
+      var picHeight = 2750;
+      var viewHeight = 200;
+      
+      var picWidth = 13596;
+      var viewWidth = 400;
+      
+      var marginTop = 0;
+      var marginRight = 0;
+      var marginBottom = 0;
+      var marginLeft = 0;
+      
+      if (window.DeviceMotionEvent == undefined) {
+        document.getElementById("no").style.display="block";
+        document.getElementById("yes").style.display="none";
+      } 
+      else {
+        window.ondeviceorientation = function(event) {
+          alpha = event.alpha;
+          beta = event.beta-75;
+          gamma = event.gamma;
+          
+          if (alpha === null) {
+            alpha = 180;
+          }
+        }
+        
+        setInterval(function() {
+          document.getElementById("videobox").style.height = viewHeight;
+          document.getElementById("videobox").style.width = viewWidth;
+          document.getElementById("video").height = picHeight;
+          
+          marginTop = Math.round(picHeight/360*beta-(picHeight-viewHeight)/2);
+          marginRight = Math.round(-picWidth/360*alpha+viewWidth/2);
+          marginBottom = Math.round(-picHeight/360*beta-(picHeight-viewHeight)/2);
+          marginLeft = Math.round(picWidth/360*alpha-picWidth+viewWidth/2);
+          
+          document.getElementById("video").style.margin = marginTop + "px " + marginRight + "px " + marginBottom + "px " + marginLeft + "px";
+          
+        }, delay);
+      }
+      
+    </script>
+    
+  </body>
+  
+</html>
