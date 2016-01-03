@@ -1,2 +1,2 @@
-# 360
-Viewing live 360 videostream on a webpage using javascript and build-in gyroscope and accelerometer on a smartphone
+# View live 360 videostream on a smartphone
+The aim of this project is to be able to watch a <b>live</b> 360 videostream on a smartphone. The project is inspired by the <b>recorded</b> 360 videostreams that lately have shown up on Facebook and Youtube (like youtu.be/7gjR60TSn8Q). Such videos these gives the viewer with an immersive experience of being there himself by utilizing the built-in gyroscope and accelerometer of most new smartphones to change the direction of view with the head movement.
