@@ -4,3 +4,10 @@ The aim of this project is to be able to watch a <b>live</b> 360 video stream on
 We want to achieve the same kind of "being-there" experience with live video. We acknowledge that real 3D 360 view takes a lot of computation power, but we have seen that 2D 360 live conference calls are possible in real time with commercial available equipment like the device seen on the table in center of this picture http://rack.1.mshcdn.com/media/ZgkyMDE0LzAyLzA0LzFlL3BvbHljb21yb29tLjE5MjE4LmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/99230cc9/c2a/polycom-room-system.jpg. Therefore, we believe that a lightweight 2D solution is possible. 
 
 We want to put a live video stream from such a device into a webpage and "navigate" around the stream by using dynamically cropping of the stream. I.e. say at every 50 ms the device orientation is measured locally and the video stream is cropped accordingly. The entire video stream is loaded to the smartphone contiunueolsy, but only part of it is shown. Thereby the viewer gets the desired experience of having a device in his hands that acts like a window through which he can experience another location in realtime.
+
+
+To setup:
+
+1. Install openCV (e.g. http://milq.github.io/install-opencv-ubuntu-debian/)
+2. Flask (http://blog.miguelgrinberg.com/post/video-streaming-with-flask)
+3. Setup your local network (or use localtunnel.me) to browse the page from your phone
