@@ -8,6 +8,6 @@ We want to put a live video stream from such a device into a webpage and "naviga
 
 To setup:
 
-1. Install openCV (e.g. http://milq.github.io/install-opencv-ubuntu-debian/ or http://docs.opencv.org/master/d5/de5/tutorial_py_setup_in_windows.html)
+1. Install openCV (e.g. http://milq.github.io/install-opencv-ubuntu-debian/ or http://docs.opencv.org/master/d5/de5/tutorial_py_setup_in_windows.html (use Numpy 1.8.0 instead: http://sourceforge.net/projects/numpy/files/NumPy/1.8.0/numpy-1.8.0-win32-superpack-python2.7.exe/download))
 2. Flask (http://blog.miguelgrinberg.com/post/video-streaming-with-flask)
 3. Setup your local network (or use localtunnel.me) to browse the page from your phone
